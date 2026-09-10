@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh '''
                 echo "test stage"
+                grep -r "index" build/
                 '''
             }
         }
