@@ -30,8 +30,8 @@ pipeline {
             steps {
                 sh '''
                 echo "test stage"
-                #grep -r "index" build/
-                npm test -- --watchAll=false
+                test -f build/index.js
+                npm test 
                 '''
             }
         }
